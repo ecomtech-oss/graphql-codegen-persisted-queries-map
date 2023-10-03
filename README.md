@@ -48,7 +48,7 @@
 Установите плагин через npm:
 
 ```
-npm i -D @smkt-web/persisted-queries-map
+npm i -S @graphql-codegen/apollo-persisted-queries-map
 ```
 
 ### Пример использования
@@ -63,7 +63,7 @@ module.exports = {
     ['./src/__generated__/operationsMap.ts']: {
       documents: ['./src/**/!(__generated__)/*.gql.ts'],
       plugins: [
-        'node_modules/@smkt-web/persisted-queries-map'
+        'apollo-persisted-queries-map'
       ],
       config: {
         persistedQueriesMap: {
@@ -81,7 +81,7 @@ module.exports = {
 `App.tsx`
 
 ```tsx
-import { getApolloLinks } from '@smkt-web/persisted-queries-map'
+import { getApolloLinks } from '@graphql-codegen/apollo-persisted-queries-map'
 import { ApolloProvider, ApolloClient, from } from '@apollo/client'
 import { VFC } from 'react'
 
