@@ -1,0 +1,3 @@
+include:
+  - project: 'platform/frontend/smkt-cicd'
+    file: 'pipelines/platform-lib.yml'

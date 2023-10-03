@@ -1,0 +1,67 @@
+{
+  "name": "@graphql-codegen/apollo-persisted-queries-map",
+  "version": "0.1.0",
+  "description": "GraphQL Code Generator plugin for generating persisted queries map",
+  "author": "Samokat",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "typescript": {
+    "definition": "./dist/types/index.d.ts"
+  },
+  "files": [
+    "./dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:samokat-oss/graphql-codegen-persisted-queries-map.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "ts:check": "tsc --noEmit",
+    "lint": "eslint src/*",
+    "build:clean": "rimraf dist/",
+    "build:ts": "tsc -b .config/tsconfig.esm.json .config/tsconfig.cjs.json .config/tsconfig.types.json",
+    "prepublishOnly": "npm run build:clean && npm run build:ts"
+  },
+  "dependencies": {
+    "@graphql-codegen/plugin-helpers": "5.0.1",
+    "crypto": "1.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.4",
+    "@typescript-eslint/eslint-plugin": "6.5.0",
+    "@typescript-eslint/parser": "6.5.0",
+    "eslint": "8.48.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-plugin-import": "2.28.1",
+    "jest": "29.6.4",
+    "rimraf": "5.0.1",
+    "ts-jest": "29.1.1",
+    "typescript": "5.2.2"
+  },
+  "peerDependencies": {
+    "graphql": "^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0",
+    "@apollo/client": ">=3.3.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "airbnb-typescript"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "react/jsx-filename-extension": "off",
+      "import/prefer-default-export": "off"
+    }
+  }
+}
