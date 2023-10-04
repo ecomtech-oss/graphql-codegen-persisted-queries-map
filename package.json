@@ -1,5 +1,5 @@
 {
-  "name": "@graphql-codegen/apollo-persisted-queries-map",
+  "name": "@samokat/apollo-persisted-queries-map",
   "version": "0.1.0",
   "description": "GraphQL Code Generator plugin for generating persisted queries map",
   "author": "Samokat",
