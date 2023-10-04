@@ -24,7 +24,7 @@
     "lint": "eslint src/*",
     "build:clean": "rimraf dist/",
     "build:ts": "tsc -b .config/tsconfig.esm.json .config/tsconfig.cjs.json .config/tsconfig.types.json",
-    "prepublishOnly": "npm run build:clean && npm run build:ts"
+    "prepublishOnly": "npm run test && npm run ts:check && npm run lint && npm run build:clean && npm run build:ts"
   },
   "dependencies": {
     "@graphql-codegen/plugin-helpers": "5.0.1",
