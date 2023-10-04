@@ -18,6 +18,13 @@
     "type": "git",
     "url": "git@github.com:samokat-oss/graphql-codegen-persisted-queries-map.git"
   },
+  "bugs": {
+    "url": "https://github.com/samokat-oss/graphql-codegen-persisted-queries-map/issues"
+  },
+  "homepage": "https://github.com/samokat-oss/graphql-codegen-persisted-queries-map#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "ts:check": "tsc --noEmit",
